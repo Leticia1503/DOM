@@ -1,0 +1,27 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retângulo que muda de cor</title>
+  <style>
+
+    #retangulo {
+      width: 200px;   
+      height: 100px; 
+      background-color: blue; 
+    }
+  </style>
+</head>
+<body>
+
+  <div id="retangulo"></div>
+
+  <script>
+    window.onload = function() {
+      const retangulo = document.getElementById('retangulo');
+      retangulo.style.backgroundColor = 'red';
+    };
+  </script>
+
+</body>
+</html>
