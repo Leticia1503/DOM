@@ -1,24 +1,210 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quadrado que muda de cor</title>
+    <meta charset="UTF-8">
+    <title>Exercícios de Mudança de Cor com JavaScript</title>
+    <style>
+        /* Estilos gerais para todos os exercícios */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
 
-  <style>
-    #quadrado {
-      width: 100px;
-      height: 100px;
-      background-color: gray;
-    }
-  </style>
+        .quadrado {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .retangulo {
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            margin: 10px;
+        }
+
+        .circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        .banner {
+            width: 100%;
+            height: 50px;
+            background-color: white;
+            margin: 10px 0;
+        }
+
+        .triangulo {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid black;
+            margin: 10px;
+        }
+
+        .quadrado-pequeno {
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            display: inline-block;
+            margin: 2px;
+        }
+
+        .oval {
+            width: 150px;
+            height: 80px;
+            background-color: gray;
+            border-radius: 75px / 40px;
+            margin: 10px;
+        }
+
+        .container {
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
-  <div id="quadrado"></div>
-  <script>
-    window.onload = function() {
-      const quadrado = document.getElementById('quadrado');
-      quadrado.style.backgroundColor = 'green';
-    };
-  </script>
+
+    <!-- Exercício 1 -->
+    <div class="container">
+        <h2>Exercício 1</h2>
+        <div id="quadrado1" class="quadrado"></div>
+    </div>
+
+    <!-- Exercício 2 -->
+    <div class="container">
+        <h2>Exercício 2</h2>
+        <div id="retangulo" class="retangulo"></div>
+    </div>
+
+    <!-- Exercício 3 -->
+    <div class="container">
+        <h2>Exercício 3</h2>
+        <div id="circulo1" class="circulo"></div>
+    </div>
+
+    <!-- Exercício 4 -->
+    <div class="container">
+        <h2>Exercício 4</h2>
+        <div id="q1" class="quadrado"></div>
+        <div id="q2" class="quadrado"></div>
+        <div id="q3" class="quadrado"></div>
+    </div>
+
+    <!-- Exercício 5 -->
+    <div class="container">
+        <h2>Exercício 5</h2>
+        <p id="paragrafo1" style="background-color: lightgray; padding: 10px;">Este é um parágrafo.</p>
+    </div>
+
+    <!-- Exercício 6 -->
+    <div class="container">
+        <h2>Exercício 6</h2>
+        <div id="banner" class="banner"></div>
+    </div>
+
+    <!-- Exercício 7 -->
+    <div class="container">
+        <h2>Exercício 7</h2>
+        <div id="triangulo" class="triangulo"></div>
+    </div>
+
+    <!-- Exercício 8 -->
+    <div class="container">
+        <h2>Exercício 8</h2>
+        <div id="circulo2" class="circulo" style="background-color: red;"></div>
+        <div id="quadrado2" class="quadrado" style="background-color: blue;"></div>
+    </div>
+
+    <!-- Exercício 9 -->
+    <div class="container">
+        <h2>Exercício 9</h2>
+        <h1 id="titulo" style="color: black;">Título de Exemplo</h1>
+    </div>
+
+    <!-- Exercício 10 -->
+    <div class="container">
+        <h2>Exercício 10</h2>
+        <div id="c1" class="quadrado-pequeno"></div>
+        <div id="c2" class="quadrado-pequeno"></div>
+        <div id="c3" class="quadrado-pequeno"></div>
+        <div id="c4" class="quadrado-pequeno"></div>
+        <div id="c5" class="quadrado-pequeno"></div>
+    </div>
+
+    <!-- Exercício 11 -->
+    <div class="container">
+        <h2>Exercício 11</h2>
+        <div id="div11" style="background-color: pink; padding: 10px;">
+            <p id="p11" style="color: black;">Texto do parágrafo</p>
+        </div>
+    </div>
+
+    <!-- Exercício 12 -->
+    <div class="container">
+        <h2>Exercício 12</h2>
+        <div id="oval" class="oval"></div>
+    </div>
+
+    <script>
+        // Exercício 1
+        document.getElementById("quadrado1").style.backgroundColor = "green";
+
+        // Exercício 2
+        document.getElementById("retangulo").style.backgroundColor = "red";
+
+        // Exercício 3
+        document.getElementById("circulo1").style.backgroundColor = "purple";
+
+        // Exercício 4
+        document.getElementById("q1").style.backgroundColor = "blue";
+        document.getElementById("q2").style.backgroundColor = "orange";
+        document.getElementById("q3").style.backgroundColor = "pink";
+
+        // Exercício 5
+        const p1 = document.getElementById("paragrafo1");
+        p1.style.backgroundColor = "black";
+        p1.style.color = "white";
+
+        // Exercício 6
+        document.getElementById("banner").style.backgroundColor = "#333333";
+
+        // Exercício 7
+        document.getElementById("triangulo").style.borderBottomColor = "lime";
+
+        // Exercício 8
+        const circulo2 = document.getElementById("circulo2");
+        const quadrado2 = document.getElementById("quadrado2");
+        const corCirculo = circulo2.style.backgroundColor;
+        circulo2.style.backgroundColor = quadrado2.style.backgroundColor;
+        quadrado2.style.backgroundColor = corCirculo;
+
+        // Exercício 9
+        const titulo = document.getElementById("titulo");
+        titulo.style.color = "green";
+        titulo.style.backgroundColor = "yellow";
+
+        // Exercício 10
+        document.getElementById("c1").style.backgroundColor = "red";
+        document.getElementById("c2").style.backgroundColor = "orange";
+        document.getElementById("c3").style.backgroundColor = "yellow";
+        document.getElementById("c4").style.backgroundColor = "green";
+        document.getElementById("c5").style.backgroundColor = "blue";
+
+        // Exercício 11
+        document.getElementById("div11").style.backgroundColor = "black";
+        document.getElementById("p11").style.color = "pink";
+
+        // Exercício 12
+        document.getElementById("oval").style.backgroundColor = "cyan";
+    </script>
 </body>
 </html>
